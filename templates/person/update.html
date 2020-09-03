@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Modify Employee
+{% endblock title %}
+
+{% block content %}
+    {% include 'includes/header.html' %}
+    <div class="grid-container">
+        <div class="grid-x">
+            <h1 class="cell">Update data employee</h1>
+            <form class="grid-x grid-margin-x" action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+                <div class="cell large-6">
+                    <label>Names</label>
+                        {{form.first_name}}
+                </div>
+                <div class="cell large-6">
+                    <label>Last Names:</label>
+                        {{form.last_name}}
+                </div>
+                <div class="cell large-6">
+                    <label>Job:</label>
+                        {{form.job}}
+                </div>
+                <div class="cell large-6">
+                    <label>Department:</label>
+                        {{form.department}}
+                </div>
+                <div class="cell large-6">
+                    <label>Skills:</label>
+                        {{form.skills}}
+                </div>
+                <div class="cell">
+                    <button type="submit" class="primary button">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

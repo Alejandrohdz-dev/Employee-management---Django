@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Search employee by key word</h1>
+    <form method = "GET">{% csrf_token %}
+        <input type="text" name="kword" id="kword" placeholder = "introduce name here">
+        <button type = "submit">Search</button>
+    </form>
+    <h3>List</h3>
+    {% for e in employees %}
+        {{e}}
+    {% endfor %} 
+</body>
+</html>

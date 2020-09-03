@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Delete Employee
+{% endblock title %}
+
+{% block content %}
+    {% include 'includes/header.html' %}
+    <div class="grid-container">
+        <div class="grid-x">
+            <h1 class="cell">Delete Employee</h1>
+            <form class="cell" action="" method="post">{% csrf_token %}
+                <p>Do you like to delete the employee?</p>
+                <button class="button primary" type="submit">Yes</button>
+                <a class="button alert" href="{% url 'person_app:employee_admin' %}">No</a>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
