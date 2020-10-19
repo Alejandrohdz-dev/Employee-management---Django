@@ -1,4 +1,4 @@
-# Employee-management---Django
+# Employee_management---Django
 
 Is a little project with a CRUD of employees and departments.
 
